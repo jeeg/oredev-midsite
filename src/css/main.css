@@ -33,6 +33,10 @@
     font-size: 2.6em;
   }
 
+  .svg-logo {
+    width: 4.2em;
+  }
+
   .main-title a {
     text-decoration: none;
   }
