@@ -1,0 +1,503 @@
+/**
+ * main.css
+ *
+ * @author Fredrik Frodlund
+ */
+
+@media screen {
+
+  /**
+   * Landmark content
+   */
+  .landmark-content {
+    margin: 0 auto;
+    max-width: 90em;
+    overflow: hidden;
+    padding: 0 1em;
+    position: relative;
+  }
+
+  /**
+   * Header (banner)
+   */
+  [role="banner"] {
+    background-color: #fff;
+    padding: 0;
+  }
+
+  [role="banner"] .landmark-content {
+    padding: 1em;
+  }
+
+  .main-title {
+    font-size: 2.6em;
+  }
+
+  .main-title a {
+    text-decoration: none;
+  }
+
+  /**
+   * Navigation
+   */
+  [role="navigation"] {
+    margin-left: auto;
+  }
+
+  #main-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0.25em 0;
+  }
+
+  #main-nav li {
+    display: inline;
+  }
+
+  #main-nav li + li {
+    padding-left: 0.25em;
+  }
+
+  #main-nav li + li::before {
+    content: "-";
+    padding-right: 0.5em;
+  }
+
+  #main-nav a {
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  /**
+   * Hero & year list
+   */
+  .main-message {
+    font-size: 3em;
+    font-weight: 300;
+    line-height: 1.125;
+    margin: 0.75em 0;
+    text-align: center;
+  }
+
+  .year-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .year-list li {
+    display: inline;
+  }
+
+  .year-list a {
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+
+  .year-list li + li::before {
+    content: "-";
+    padding-right: 0.5em;
+  }
+
+  /**
+   * Articles
+   */
+  [role="article"] + [role="article"] {
+    margin-top: 2em;
+  }
+
+  [role="article"] h2 a {
+    color: currentcolor;
+  }
+
+  [role="article"] a {
+    color: #b60000;
+  }
+
+  .article-end {
+    color: #eee;
+    padding: 2em 0;
+    text-align: center;
+  }
+
+  .article-link {
+    text-decoration: none;
+  }
+
+  .permalink .svg-icon {
+    height: 0.85em;
+    width: 0.85em;
+    margin-left: 0.25em;
+    vertical-align: baseline;
+  }
+
+  /* Icon for external links */
+  [rel="external"] + .svg-icon {
+    fill: #bbb;
+    margin: 0;
+    vertical-align: middle;
+    height: 0.65em;
+    width: 0.65em;
+  }
+
+  /* Post meta data */
+  .post-info {
+    color: #717171;
+    font-size: 0.85em;
+    margin-top: 0;
+  }
+
+  .post-tags {
+    color: #717171;
+    font-size: 0.85em;
+    margin-top: 0.5em;
+  }
+
+  .post-tags strong {
+    font-weight: 600;
+  }
+
+  /* Editorial lists */
+  [role="article"] li + li {
+    margin-top: 0.5em;
+  }
+
+  /* Images with captions */
+  figure.image {
+    background-color: #f5f5f5;
+    border: 1px solid #efefef;
+    margin: 2em 0;
+  }
+
+  figure.image img {
+    display: block;
+  }
+
+  figure.image figcaption {
+    font-size: 0.9em;
+    font-style: italic;
+    margin: 0;
+    padding: 0.5em 0.75em;
+  }
+
+  /**
+   * Code highlighting
+   */
+  .highlighter-rouge {
+    margin: 0;
+  }
+
+  .highlighter-rouge pre {
+    background: #252525;
+    margin: 2em 0;
+    overflow-x: auto;
+    padding: 1em;
+  }
+
+  /* Inline code */
+  p > code {
+    background: #fbf6e8;
+    border: 1px solid #f0dfaf;
+    padding: 0.1em 0.2em;
+  }
+
+  /* Line numbers (requires JS) */
+  .js .highlighter-rouge pre {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .js .highlighter-rouge code {
+    counter-reset: linenumber;
+    order: 2;
+    padding-right: 1em;
+  }
+
+  .js .ln {
+    border-right: 1px solid #555;
+    color: #888;
+    margin-top: 0;
+    margin-right: 0.75em;
+    padding-right: 0.5em;
+    flex: 1 0 auto;
+    text-align: right;
+    max-width: 2em;
+    order: 1;
+    user-select: none;
+  }
+
+  .js .ln span::before {
+    counter-increment: linenumber;
+    content: counter(linenumber);
+    display: block;
+    margin-top: 0;
+  }
+
+  .js .ln + code {
+    margin-top: 0;
+  }
+
+  /**
+   * Contentinfo
+   */
+  [role="contentinfo"] {
+    background: #333;
+    color: #fff;
+    padding: 2em 0;
+  }
+
+  [role="contentinfo"] .landmark-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  [role="contentinfo"] a,
+  [role="contentinfo"] a:visited {
+    color: currentcolor;
+    text-decoration: none;
+  }
+
+  [role="contentinfo"] a:hover,
+  [role="contentinfo"] a:focus,
+  [role="contentinfo"] a:active {
+    color: #efefef;
+  }
+
+  [role="contentinfo"] .svg-icon {
+    fill: currentcolor;
+    display: inline-block;
+    margin-right: 0.25em;
+  }
+
+  /* Footer links */
+  .footer-links.social {
+    margin-right: auto;
+  }
+
+  .footer-links.subscribe {
+    margin-left: auto;
+  }
+
+  .social,
+  .subscribe {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-links li + li {
+    margin-top: 1em;
+  }
+
+  /* Copyright */
+  .copyright {
+    display: block;
+    font-size: 0.75em;
+    margin-top: 3em;
+    width: 100%;
+  }
+
+  .copyright a {
+    text-decoration: underline;
+  }
+
+  /**
+   * Custom selection colors
+   */
+  ::selection {
+    background-color: #7f9f7f;
+    color: #fff;
+  }
+
+  [role="contentinfo"] ::selection {
+    background-color: #7f9f7f;
+    color: #fff;
+  }
+
+  [role="article"] pre code::selection,
+  [role="article"] pre code ::selection {
+    background-color: #fdce93;
+    color: #252525;
+  }
+
+  /**
+   * Older & newer articles navigation
+   */
+  .more-articles {
+    margin-top: 4em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .more-articles a {
+    background: #333;
+    border-radius: 0.5em;
+    color: #fff;
+    display: block;
+    margin-top: 0;
+    padding: 0.35em 1em;
+    position: relative;
+  }
+
+  .more-articles a:hover,
+  .more-articles a:focus,
+  .more-articles a:active {
+    background: #414141;
+  }
+
+  .more-articles .older,
+  .more-articles .newer {
+    display: inline-block;
+  }
+
+  .more-articles .newer {
+    margin-left: auto;
+  }
+
+  /**
+   * Custom error page (404)
+   */
+  .not-found [role="article"] {
+    text-align: center;
+  }
+
+  .not-found [role="article"] #svg-404 {
+    fill: #ccc;
+    height: 8.5em;
+  }
+
+  /**
+   * Blockquotes
+   */
+  blockquote {
+    margin: 0 1em 1em;
+    padding-left: 0.75em;
+    border-left: 4px solid #eee;
+    color: #595959;
+  }
+
+  /**
+   * Footnotes
+   *
+   * Inspired by an article by Hugo Giraudel
+   * (http://www.sitepoint.com/accessible-footnotes-css/)
+   */
+
+  /* Initialiazing a 'footnotes' counter on the wrapper */
+  [role="article"] {
+    counter-reset: footnotes;
+  }
+
+  /* Inline footnotes references */
+  [aria-describedby="footnotes"] {
+    color: inherit;
+    counter-increment: footnotes;
+    cursor: default;
+    outline: none;
+    text-decoration: none;
+  }
+
+  /* Numbered references */
+  [aria-describedby="footnotes"]::after {
+    color: inherit;
+    content: "[" counter(footnotes) "]";
+    cursor: pointer;
+    font-size: 0.5em;
+    margin-left: 2px;
+    text-decoration: underline;
+    vertical-align: super;
+  }
+
+  /* Resetting the default focused styles on the number */
+  [aria-describedby="footnotes"]:focus::after {
+    outline: thin dotted;
+    outline-offset: 2px;
+  }
+
+  /**
+   * Eye candy & visual fluff
+   */
+  a {
+    transition: all 0.25s ease;
+  }
+
+  /**
+   * Inline SVG icons
+   */
+  .svg-icon {
+    display: inline-block;
+    fill: currentcolor;
+    height: 1.2em;
+    width: 1.2em;
+    vertical-align: -0.2em;
+  }
+
+  /**
+   * Dyslexic mode toggle
+   */
+  .dyslexic-mode {
+    font-size: 1.4em;
+    letter-spacing: 0.25em;
+    line-height: 2;
+  }
+
+  .dyslexic-mode .landmark-content {
+    max-width: 26em;
+  }
+
+  /* Toggle button */
+  .toggle-dyslexic-mode {
+    font-size: 0.65em;
+    margin-top: 0;
+    position: absolute;
+    top: 1.5em;
+    right: 0;
+  }
+
+}/* END @media screen */
+
+@media only screen {
+
+  /**
+   * Sticky footer
+   */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  [role="main"] {
+    flex: 1 0 auto;
+  }
+
+}/* END @media only screen */
+
+@media only screen and (min-width: 42em) {
+
+  /**
+   * Header (banner)
+   */
+  [role="banner"] .landmark-content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  /**
+   * Navigation
+   */
+  [role="navigation"] {
+    margin-top: 0;
+  }
+
+}/* END @media only screen and (max-width: 28em) */

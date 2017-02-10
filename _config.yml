@@ -1,0 +1,51 @@
+# Site settings
+title: Øredev
+email: noreply@oredev.org
+baseurl: ''
+url: https://oredev.org
+permalink: pretty
+paginate: 5
+
+# Default page settings
+defaults:
+  -
+    scope:
+      path: ''
+    values:
+      author:
+
+# Server settings
+host: 0.0.0.0
+
+# Gems
+gems:
+  - 'jekyll-archives'
+  - 'jekyll-paginate'
+  - 'rouge'
+
+# Archives
+jekyll-archives:
+  enabled: []
+  layout: 'archive'
+  permalinks:
+    year: '/archive/:year/'
+    month: '/archive/:year/archive/:month/'
+    day: '/archive/:year/archive/:month/archive/:day/'
+    tag: '/archive/tag/:name/'
+    category: '/archive/category/:name/'
+
+# Exclude
+exclude:
+  - 'node_modules'
+  - 'script'
+  - 'Makefile'
+  - 'package.json'
+  - 'lib'
+  - 'site_config.mk'
+  - 'LICENSE.md'
+  - 'README.md'
+  - 'src'
+  - 'gulpfile.js'
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'yarn.lock'

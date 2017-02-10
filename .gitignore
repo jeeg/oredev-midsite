@@ -1,0 +1,14 @@
+# Jekyll stuff
+_site
+_data/cache_bust_*.yml
+.sass-cache
+.jekyll-metadata
+
+# Generated stuff
+gui
+
+# Node stuff
+node_modules
+
+# Sensitive data shouldn't be included
+site_config.mk
