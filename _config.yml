@@ -2,7 +2,7 @@
 title: Øredev
 email: noreply@oredev.org
 baseurl: '/oredev-midsite'
-url: https://oredev.org
+url: https://frippz.github.io
 permalink: pretty
 paginate: 5
 
@@ -22,17 +22,6 @@ gems:
   - 'jekyll-archives'
   - 'jekyll-paginate'
   - 'rouge'
-
-# Archives
-jekyll-archives:
-  enabled: []
-  layout: 'archive'
-  permalinks:
-    year: '/archive/:year/'
-    month: '/archive/:year/archive/:month/'
-    day: '/archive/:year/archive/:month/archive/:day/'
-    tag: '/archive/tag/:name/'
-    category: '/archive/category/:name/'
 
 # Exclude
 exclude:
