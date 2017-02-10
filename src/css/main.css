@@ -13,7 +13,7 @@
     margin: 0 auto;
     max-width: 62em;
     overflow: hidden;
-    padding: 0 1em;
+    padding: 1em;
     position: relative;
   }
 
@@ -23,10 +23,6 @@
   [role="banner"] {
     background-color: #fff;
     padding: 0;
-  }
-
-  [role="banner"] .landmark-content {
-    padding: 1em;
   }
 
   .main-title {
