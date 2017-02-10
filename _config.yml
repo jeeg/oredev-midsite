@@ -1,7 +1,7 @@
 # Site settings
 title: Øredev
 email: noreply@oredev.org
-baseurl: '/oredev-midsite'
+baseurl: ''
 url: https://frippz.github.io
 permalink: pretty
 paginate: 5

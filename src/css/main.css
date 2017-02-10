@@ -500,4 +500,11 @@
     margin-top: 0;
   }
 
+  /**
+   * Hero
+   */
+  .banner-hero {
+    flex-basis: 100%;
+  }
+
 }/* END @media only screen and (max-width: 28em) */
