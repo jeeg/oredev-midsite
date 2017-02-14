@@ -263,12 +263,12 @@
   }
 
   .teaser-item {
-    flex: 0 0 14em;
+    flex: 0 0 13.5em;
     margin-top: 0;
   }
 
   .teaser-item + .teaser-item {
-    margin-left: 1em;
+    margin-left: 1.5em;
   }
 
 }
