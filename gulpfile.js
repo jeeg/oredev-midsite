@@ -21,7 +21,6 @@ var gulp             = require('gulp'),
     customProperties = require('postcss-custom-properties'),
     eslint           = require('gulp-eslint'),
     liveServer       = require('live-server'),
-    hashsum          = require('gulp-hashsum'),
     stylelint        = require('gulp-stylelint'),
     svgSprite        = require('gulp-svg-sprite'),
     exec             = require('child_process').exec;
@@ -94,7 +93,6 @@ gulp.task('css', function () {
     .pipe(cssnano({
       discardComments: { removeAll: true }
     }))
-    .pipe(hashsum({ filename: './_data/cache_bust_css.yml', hash: 'md5' }))
     .pipe(gulpif(!isProduction, sourcemaps.write()))
     .pipe(gulp.dest(paths.cssDest));
 });
@@ -110,7 +108,6 @@ gulp.task('js', function () {
     .pipe(sourcemaps.init())
     .pipe(concat(paths.jsOutput))
     .pipe(uglify())
-    .pipe(hashsum({ filename: './_data/cache_bust_js.yml', hash: 'md5' }))
     .pipe(gulpif(!isProduction, sourcemaps.write('.')))
     .pipe(gulp.dest(paths.jsDest));
 });
