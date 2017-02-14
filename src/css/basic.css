@@ -210,6 +210,21 @@
   }
 
   /**
+   * Block links
+   */
+  .block-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .block-link:hover,
+  .block-link:focus,
+  .block-link:active {
+    text-decoration: underline;
+  }
+
+  /**
    * Emphasis
    */
   b,
